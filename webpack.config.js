@@ -5,6 +5,7 @@ module.exports = {
     filename: "./public/bundle.js",
   },
   mode: "development",
+  context: __dirname,
   devtool: "source-map",
   module: {
     rules: [
@@ -15,6 +16,10 @@ module.exports = {
         options: {
           presets: ["@babel/preset-react"],
         },
+      },
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
       },
     ],
   },
