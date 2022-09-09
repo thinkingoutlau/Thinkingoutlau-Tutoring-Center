@@ -1,7 +1,15 @@
+import { Provider } from "react-redux";
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
+import Routes from "./components/Routes";
+import store from "./store";
 
-ReactDOM.render(
-  <div>My first attempt !!</div>,
-  document.getElementById("app") // make sure this is the same as the id of the div in your index.html
+const root = createRoot(document.getElementById("app"));
+
+root.render(
+  <Provider store={store}>
+    <Routes />
+  </Provider>
+
+  // make sure this is the same as the id of the div in your index.html
 );
