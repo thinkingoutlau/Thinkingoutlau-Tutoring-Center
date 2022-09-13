@@ -1,15 +1,16 @@
 import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./src/App";
+import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
-import { createRoot } from "react-dom/client";
-import store from "./store";
-import Routes from "./components/Routes";
+import store from "./src/store/store";
 
-const root = createRoot(document.getElementById("app"));
+const root = ReactDOM.createRoot(document.getElementById("app"));
 
 root.render(
-  <Provider store={store}>
-    <Routes />
-  </Provider>
-
-  // make sure this is the same as the id of the div in your index.html
+  <BrowserRouter>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </BrowserRouter>
 );
