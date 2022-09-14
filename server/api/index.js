@@ -1,8 +1,12 @@
 const router = require("express").Router();
 
 //match all requests to /api/...
-//look at JPFP for reference in needed
-//router.use()
+//look at JPFP for reference if needed
+
+router.use("/users", require("./users"));
+router.use("/login", require("./login"));
+router.use("/signup", require("./signup"));
+// router.use("/subjects", require("./subjects"));
 
 router.use(function (req, res, next) {
   const err = new Error("Not found.");

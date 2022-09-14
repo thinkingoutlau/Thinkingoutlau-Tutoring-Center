@@ -1,19 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { createNewUser } from "../store/user";
 import { Link } from "react-router-dom";
-import axios from "axios";
 
-function Login() {
-  const [form, setForm] = React.useState({
+function SignUp() {
+  const dispatch = useDispatch();
+  const [form, setForm] = useState({
     username: "",
     password: "",
   });
-  const handleSubmit = async (form) => {
-    try {
-      const req = await axios.post("/api/login", form);
-      console.log(req);
-    } catch (error) {
-      console.log(error);
-    }
+  const handleSubmit = (form) => {
+    dispatch(createNewUser(form));
   };
 
   return (
@@ -23,8 +20,8 @@ function Login() {
         handleSubmit(form);
       }}
     >
-      <label htmlFor="Login">
-        <strong>Login</strong>
+      <label htmlFor="SignUp">
+        <strong>Sign Up</strong>
       </label>
 
       <input
@@ -43,11 +40,11 @@ function Login() {
         placeholder="Enter password"
       />
       <button>Submit</button>
-      <div className="makeAccount">
+      <div className="login">
         <p>
-          {"Don't have an account?"}
+          {"Have an account already?"}
           <strong>
-            <Link to="/signup">Sign up here</Link>
+            <Link to="/login">Login here</Link>
           </strong>
         </p>
       </div>
@@ -55,4 +52,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default SignUp;

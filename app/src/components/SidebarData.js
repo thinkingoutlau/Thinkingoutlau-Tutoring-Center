@@ -7,31 +7,31 @@ export const SidebarData = [
   {
     title: "Home",
     path: "/",
-    icon: <AiIcons.AiFillHome />,
+    // icon: <AiIcons.AiFillHome />,
     className: "nav-text",
   },
   {
     title: "Login",
     path: "/login",
-    icon: <IoIcons.IoIosPaper />,
+    // icon: <IoIcons.IoIosPaper />,
     className: "nav-text",
   },
   {
     title: "Subjects",
     path: "/subjects",
-    icon: <FaIcons.FaCartPlus />,
+    // icon: <FaIcons.FaCartPlus />,
     className: "nav-text",
   },
   {
     title: "Tutors",
     path: "/tutors",
-    icon: <IoIcons.IoMdPeople />,
+    // icon: <IoIcons.IoMdPeople />,
     className: "nav-text",
   },
   {
     title: "Message",
     path: "/message",
-    icon: <FaIcons.FaEnvelopeOpenText />,
+    // icon: <FaIcons.FaEnvelopeOpenText />,
     className: "nav-text",
   },
 ];
