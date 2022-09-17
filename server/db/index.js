@@ -3,6 +3,7 @@
 
 const db = require("./database");
 const User = require("./models/User");
+const Message = require("./models/Message");
 
 //associations
 
@@ -12,6 +13,7 @@ const syncAndSeed = async () => {
     { username: "moe", password: "moe_pw" },
     { username: "lucy", password: "lucy_pw" },
     { username: "ethyl", password: "ethyl_pw" },
+    { username: "thinkingoutlau", password: "hello" },
   ];
   const promises = credentials.map((credential) => User.create(credential));
   await Promise.all(promises);
@@ -21,5 +23,6 @@ module.exports = {
   syncAndSeed,
   models: {
     User,
+    Message,
   },
 };

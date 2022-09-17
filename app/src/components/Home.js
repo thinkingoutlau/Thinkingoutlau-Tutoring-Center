@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "./Navbar";
 
-function Home() {
+function Home({ state }) {
+  // console.log("state at home", state);
   return (
     <>
       <div id="main">
         <header>
-          <Navbar />
+          <Navbar state={state} />
           <h3>
             <p>THINKINGOUTLAU TUTORING CENTER 🧮</p>
           </h3>

@@ -1,5 +1,5 @@
 {
-  "name": "boilermaker",
+  "name": "my_own_app",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -32,6 +32,8 @@
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.4.1",
     "sequelize": "^6.21.6",
+    "socket.io": "^4.5.2",
+    "socket.io-client": "^4.5.2",
     "volleyball": "^1.5.1"
   },
   "devDependencies": {

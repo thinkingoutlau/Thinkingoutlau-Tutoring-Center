@@ -6,6 +6,7 @@ const router = require("express").Router();
 router.use("/users", require("./users"));
 router.use("/login", require("./login"));
 router.use("/signup", require("./signup"));
+router.use("/messages", require("./messages"));
 // router.use("/subjects", require("./subjects"));
 
 router.use(function (req, res, next) {

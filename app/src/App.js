@@ -9,17 +9,22 @@ import Tutors from "./components/Tutors";
 import Message from "./components/Message";
 
 function App() {
+  const [login, setLogin] = React.useState("");
+
   return (
     <>
       <div>
-        <Home />
+        <Home state={{ login, setLogin }} />
         <Routes>
           <Route path="/" element={<></>} />
-          <Route path="/login" element={<Login />} />
+          <Route
+            path="/login"
+            element={<Login state={{ login, setLogin }} />}
+          />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/subjects" element={<Subjects />} />
           <Route path="/tutors" element={<Tutors />} />
-          <Route path="/message" element={<Message />} />
+          <Route path="/messages" element={<Message />} />
         </Routes>
       </div>
     </>
