@@ -42,7 +42,7 @@ export const existingUser = (user) => {
 const userReducer = (state = initialState, action) => {
   switch (action.type) {
     case CREATE_USER:
-      return [...state, action.newUser];
+      return [action.newUser];
     case EXISTING_USER:
       return [...state, action.user];
     default:

@@ -1,9 +1,13 @@
 const router = require("express").Router();
-const { Message, User } = require("../db/models");
+const User = require("../db/models/User");
+const Message = require("../db/models/Message");
 
+//GET /api/messsages
 router.get("/", async (req, res, next) => {
   try {
-    const messages = await Message.findAll();
+    const messages = await Message.findAll({
+      attributes: ["id", "content", "userId"],
+    });
     res.json(messages);
   } catch (err) {
     next(err);

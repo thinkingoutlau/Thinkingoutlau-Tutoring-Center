@@ -19,7 +19,7 @@ function Login({ state }) {
   const handleSubmit = async (form) => {
     try {
       const { data: userInDB } = await axios.post("/api/login", form);
-      console.log(userInDB);
+      console.log("print from login, userInDB", userInDB);
       //window is a global object that has access to localStorage
       //localStorage allows us to persist data locally on the browser; setItem is a method on localStorage
       //that allows us to store info locally
@@ -41,6 +41,7 @@ function Login({ state }) {
       //which is an object from axios request
       const token = window.localStorage.getItem("token");
       console.log("show token", token);
+      console.log("show token", form.username);
       if (!token) {
         throw token;
       }
@@ -65,8 +66,9 @@ function Login({ state }) {
   //   state.setLogin("");
   // };
 
+  //why isn't form.username showing on page but state.login.username works?
   return state.login ? (
-    <div>Welcome</div>
+    <div>Welcome {state.login.username} </div>
   ) : (
     <form
       onSubmit={(event) => {

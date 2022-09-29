@@ -29,6 +29,12 @@ export const SidebarData = [
     className: "nav-text",
   },
   {
+    title: "Schedule An Appointment",
+    path: "/appointment",
+    // icon: <FaIcons.FaEnvelopeOpenText />,
+    className: "nav-text",
+  },
+  {
     title: "Message",
     path: "/messages",
     // icon: <FaIcons.FaEnvelopeOpenText />,

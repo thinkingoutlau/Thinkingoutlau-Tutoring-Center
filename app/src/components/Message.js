@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { postMessage } from "../store/message";
+import { Link } from "react-router-dom";
 
 const NewMessageEntry = () => {
   const dispatch = useDispatch();
@@ -15,42 +16,88 @@ const NewMessageEntry = () => {
 
   return (
     <div>
-      <li className="media">
-        <div className="media-left">
-          {/* <a href="#"> */}
-          {/* <img className="media-object" src={"winnie"} alt="image" /> */}
-          {/* </a> */}
+      {localStorage.length !== 0 ? (
+        <div>
+          {/* <li className="media"> */}
+          <div className="media-left">
+            {/* <a href="#"> */}
+            {/* <img className="media-object" src={"winnie"} alt="image" /> */}
+            {/* </a> */}
+          </div>
+          <div className="media-body">
+            <h4 className="media-heading">Happy chatting!</h4>
+          </div>
+          {/* </li> */}
+          <form
+            id="new-message-form"
+            onSubmit={(event) => {
+              event.preventDefault();
+              handleSubmit(message);
+            }}
+          >
+            <div className="input-group input-group-lg">
+              <input
+                className="form-control"
+                type="text"
+                name="content"
+                onChange={(event) =>
+                  setMessage({ ...message, message: event.target.value })
+                }
+                value={message.message}
+                placeholder="Say something nice..."
+              />
+              <span className="input-group-btn">
+                <button className="btn btn-default" type="submit">
+                  Chat!
+                </button>
+              </span>
+            </div>
+          </form>
         </div>
-        <div className="media-body">
-          <h4 className="media-heading">Winnie</h4>
+      ) : (
+        <div className="chatboxMessage">
+          Please log in to message our tutors or create an appointment here:{" "}
+          <Link to="/appointment">schedule</Link>
         </div>
-      </li>
-      <form
-        id="new-message-form"
-        onSubmit={(event) => {
-          event.preventDefault();
-          handleSubmit(message);
-        }}
-      >
-        <div className="input-group input-group-lg">
-          <input
-            className="form-control"
-            type="text"
-            name="content"
-            onChange={(event) =>
-              setMessage({ ...message, message: event.target.value })
-            }
-            value={message.message}
-            placeholder="Say something nice..."
-          />
-          <span className="input-group-btn">
-            <button className="btn btn-default" type="submit">
-              Chat!
-            </button>
-          </span>
-        </div>
-      </form>
+      )}
     </div>
+    // <div>
+    //   <li className="media">
+    //     <div className="media-left">
+    //       {/* <a href="#"> */}
+    //       {/* <img className="media-object" src={"winnie"} alt="image" /> */}
+    //       {/* </a> */}
+    //     </div>
+    //     <div className="media-body">
+    //       <h4 className="media-heading">Winnie</h4>
+    //     </div>
+    //   </li>
+    //   <form
+    //     id="new-message-form"
+    //     onSubmit={(event) => {
+    //       event.preventDefault();
+    //       handleSubmit(message);
+    //     }}
+    //   >
+    //     <div className="input-group input-group-lg">
+    //       <input
+    //         className="form-control"
+    //         type="text"
+    //         name="content"
+    //         onChange={(event) =>
+    //           setMessage({ ...message, message: event.target.value })
+    //         }
+    //         value={message.message}
+    //         placeholder="Say something nice..."
+    //       />
+    //       <span className="input-group-btn">
+    //         <button className="btn btn-default" type="submit">
+    //           Chat!
+    //         </button>
+    //       </span>
+    //     </div>
+    //   </form>
+    // </div>
   );
 };
 

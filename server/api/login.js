@@ -1,7 +1,6 @@
 const router = require("express").Router();
-const {
-  models: { User },
-} = require("../db");
+
+const User = require("../db/models/User");
 
 //we now have access to headers.auth which we stored the token in from frontend
 //we can now find the user using that token to send that info back to the frontend

@@ -30,13 +30,13 @@ export const postMessage = (message) => async (dispatch, getState) => {
   message.name = getState().user;
   const { data: newMessage } = await axios.post("/api/messages", message);
   dispatch(gotNewMessage(newMessage));
-  socket.emit("new-message", newMessage);
+  // socket.emit("new-message", newMessage);
 };
 
 // Reducer
 export const initialState = {
   messages: [],
-  user: "Winnie",
+  user: "",
 };
 
 // // alternative pattern for writing reducer cases

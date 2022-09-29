@@ -10,6 +10,7 @@ function Navbar({ state }) {
 
   const logout = () => {
     window.localStorage.removeItem("token");
+    window.localStorage.clear();
     state.setLogin("");
   };
 
@@ -21,7 +22,9 @@ function Navbar({ state }) {
             <Link to="#" className="menu-bars">
               <FaIcons.FaBars onClick={showSideBar} />
             </Link>
-            <button onClick={logout}>Logout</button>
+            <button className="logout" onClick={logout}>
+              Logout
+            </button>
           </div>
 
           <nav className={sidebar ? "nav-menu active" : "nav-menu"}>

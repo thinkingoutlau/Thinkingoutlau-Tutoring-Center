@@ -38,6 +38,10 @@ form {
   text-align: center;
 }
 
+.logout {
+  margin-right: 16px;
+}
+
 .navbar {
   background-color: rgb(255, 152, 159);
   height: 80px;
@@ -121,4 +125,8 @@ span {
 
 #new-message-form.btn {
   border-width: 3px;
+}
+
+.chatboxMessage {
+  font-size: 20px;
 }
