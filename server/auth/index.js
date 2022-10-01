@@ -1,20 +1,18 @@
 const router = require("express").Router();
-const {
-  models: { User },
-} = require("../db");
+const { User } = require("../db");
 
-// router.post("/login", async (req, res, next) => {
-//   try {
-//     const user = await User.authenticate(req.body);
-//     if (user) {
-//       res.send(user);
-//     } else {
-//       console.log(user);
-//     }
-//   } catch (error) {
-//     next(error);
-//   }
-// });
+router.post("/login", async (req, res, next) => {
+  try {
+    const user = await User.authenticate(req.body);
+    if (user) {
+      res.send(user);
+    } else {
+      console.log(user);
+    }
+  } catch (error) {
+    next(error);
+  }
+});
 
 router.post("/signup", async (req, res, next) => {
   try {

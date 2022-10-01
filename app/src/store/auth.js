@@ -29,9 +29,9 @@ export const authenticate =
     }
   };
 
-export const logout = () => {
+export const logout = (navigate) => {
   window.localStorage.removeItem(TOKEN);
-  history.push("/login");
+  navigate("/login");
   return {
     type: SET_AUTH,
     auth: {},

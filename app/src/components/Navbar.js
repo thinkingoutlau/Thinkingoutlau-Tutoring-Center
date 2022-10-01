@@ -1,28 +1,34 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { logout, me } from "../store/auth";
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { SidebarData } from "./SidebarData";
 
-function Navbar({ state }) {
+function Navbar() {
+  const dispatch = useDispatch();
+  const auth = useSelector(({ auth }) => auth);
+  const navigate = useNavigate();
   const [sidebar, setSidebar] = useState(false);
   const showSideBar = () => setSidebar(!sidebar);
 
-  const logout = () => {
-    window.localStorage.removeItem("token");
-    window.localStorage.clear();
-    state.setLogin("");
-  };
+  useEffect(() => {
+    dispatch(me());
+  }, []);
 
   return (
     <>
-      {state.login ? (
+      {auth.id ? (
         <>
           <div className="navbar">
             <Link to="#" className="menu-bars">
               <FaIcons.FaBars onClick={showSideBar} />
             </Link>
-            <button className="logout" onClick={logout}>
+            <button
+              className="logout"
+              onClick={() => dispatch(logout(navigate))}
+            >
               Logout
             </button>
           </div>
