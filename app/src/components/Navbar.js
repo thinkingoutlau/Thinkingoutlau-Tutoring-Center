@@ -25,12 +25,15 @@ function Navbar() {
             <Link to="#" className="menu-bars">
               <FaIcons.FaBars onClick={showSideBar} />
             </Link>
-            <button
-              className="logout"
-              onClick={() => dispatch(logout(navigate))}
-            >
-              Logout
-            </button>
+            <div className="logout">
+              <button
+                type="button"
+                className="logout"
+                onClick={() => dispatch(logout(navigate))}
+              >
+                Logout
+              </button>
+            </div>
           </div>
 
           <nav className={sidebar ? "nav-menu active" : "nav-menu"}>

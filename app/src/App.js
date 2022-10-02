@@ -7,7 +7,9 @@ import SignUp from "./components/SignUp";
 import Subjects from "./components/Subjects";
 import Tutors from "./components/Tutors";
 import Message from "./components/Message";
-import MakeAppointment from "./components/MakeAppointment";
+import MakeAppointment from "./components/HelpChatBot";
+import HomeworkHelp from "./components/HomeworkHelp";
+import Calendar from "./components/Calendar";
 
 function App() {
   return (
@@ -21,7 +23,9 @@ function App() {
           <Route path="/subjects" element={<Subjects />} />
           <Route path="/tutors" element={<Tutors />} />
           <Route path="/messages" element={<Message />} />
-          <Route path="/appointment" element={<MakeAppointment />} />
+          <Route path="/homeworkHelp" element={<HomeworkHelp />} />
+          <Route path="/calendar" element={<Calendar />} />
+          <Route path="/help" element={<MakeAppointment />} />
         </Routes>
       </div>
     </>

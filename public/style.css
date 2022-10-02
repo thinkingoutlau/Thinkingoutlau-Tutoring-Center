@@ -6,7 +6,8 @@
 }
 
 body {
-  background: rgb(247, 247, 247);
+  /* background: rgb(247, 247, 247); */
+  background: rgb(247, 246, 246);
   height: 100vh;
   width: 100vw;
 }
@@ -16,12 +17,13 @@ nav {
   font-size: 20px;
   padding: 10px;
 }
+
 h3 {
   font-size: 50px;
   text-align: center;
 }
 .quote {
-  font-size: 20px;
+  font-size: 25px;
   font-style: italic;
   text-align: center;
 }
@@ -43,21 +45,36 @@ form {
 }
 
 .navbar {
-  background-color: rgb(255, 152, 159);
-  height: 80px;
+  background-color: #f499a8;
+  /* background-color: #5deac6;  */
+  height: 100px;
   display: flex;
-  justify-content: start;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.logout {
+  font-size: 1rem;
+  color: #360c42;
+  /* color: #eeebef; */
+  font-weight: bold;
+  padding: 0.8rem;
+
+  border-radius: 15px;
+  border-width: 0.3rem;
 }
 
 .menu-bars {
   margin-left: 2rem;
-  font-size: 2rem;
+  font-size: 3rem;
   background: none;
 }
 
 .nav-menu {
   background-color: #f499a8;
+  /* background-color: #5deac6; */
   width: 250px;
   height: 100vh;
   display: flex;
@@ -84,7 +101,8 @@ form {
 
 .nav-text a {
   text-decoration: none;
-  color: #fff0f0;
+  /* color: #fff0f0; */
+  color: #ffffff;
   font-size: 18px;
   width: 95%;
   height: 100%;
@@ -96,6 +114,7 @@ form {
 
 .nav-text a:hover {
   background-color: #ff738a;
+  /* background-color: #5deac6; */
 }
 
 .nav-menu-items {
@@ -104,6 +123,7 @@ form {
 
 .navbar-toggle {
   background-color: #f499a8;
+  /* background-color: #5deac6; */
   width: 100%;
   height: 80px;
   display: flex;
@@ -129,4 +149,10 @@ span {
 
 .chatboxMessage {
   font-size: 20px;
+}
+
+.messageToClickChatBot {
+  font-size: 30px;
+  text-align: center;
+  /* padding: 30px; */
 }
