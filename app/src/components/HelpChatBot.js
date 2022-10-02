@@ -44,10 +44,10 @@ function MakeAppointment() {
     {
       id: "issues2",
       message: "Please select one of the following options:",
-      trigger: "options"
+      trigger: "options1"
     },
     {
-      id: "options",
+      id: "options1",
       options: [
         {
           value: "Speak to a tutor",
@@ -66,12 +66,44 @@ function MakeAppointment() {
       message:
         "Please click the Calendar tab on the side bar menu to schedule an appointment.",
 
-      end: true
+      trigger: "question"
     },
     {
       id: "Upload homework question",
       message:
         "Please click the Homework Help tab on the side bar menu to upload your homework.",
+      trigger: "question"
+      // end: true
+    },
+    {
+      id: "question",
+      message: "Is there anything else I can help you with?",
+      trigger: "waiting3"
+    },
+    {
+      id: "waiting3",
+      options: [
+        {
+          value: "Yes",
+          label: "Yes",
+          trigger: "Yes"
+        },
+        {
+          value: "No",
+          label: "No",
+          trigger: "No"
+        }
+      ]
+    },
+    {
+      id: "Yes",
+      message:
+        "Please contact us at thinkingoutlau@gmail.com and we will get back to you shortly. Have a nice day!",
+      end: true
+    },
+    {
+      id: "No",
+      message: "Great! Hope you have a great rest of your day!",
       end: true
     }
   ];
