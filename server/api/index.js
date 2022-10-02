@@ -7,9 +7,10 @@ router.use("/users", require("./users"));
 router.use("/login", require("./login"));
 router.use("/signup", require("./signup"));
 router.use("/messages", require("./messages"));
+router.use("/images", require("./images"));
 // router.use("/subjects", require("./subjects"));
 
-router.use(function (req, res, next) {
+router.use(function(req, res, next) {
   const err = new Error("Not found.");
   err.status = 404;
   next(err);

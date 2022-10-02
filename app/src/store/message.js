@@ -7,13 +7,13 @@ const GOT_NEW_MESSAGE = "GOT_NEW_MESSAGE";
 // const USER_SET = 'USER_SET'
 
 // Action Creators
-export const gotMessagesFromServer = (messages) => ({
+export const gotMessagesFromServer = messages => ({
   type: GOT_MESSAGES_FROM_SERVER,
-  messages,
+  messages
 });
-export const gotNewMessage = (message) => ({
+export const gotNewMessage = message => ({
   type: GOT_NEW_MESSAGE,
-  message,
+  message
 });
 // export const userSet = userName => ({
 //     type: USER_SET,
@@ -21,12 +21,12 @@ export const gotNewMessage = (message) => ({
 // })
 
 // Thunk Creator
-export const fetchMessages = () => async (dispatch) => {
+export const fetchMessages = () => async dispatch => {
   const { data: messages } = await axios.get("/api/messages");
   dispatch(gotMessagesFromServer(messages));
 };
 
-export const postMessage = (message) => async (dispatch, getState) => {
+export const postMessage = message => async (dispatch, getState) => {
   message.name = getState().user;
   const { data: newMessage } = await axios.post("/api/messages", message);
   dispatch(gotNewMessage(newMessage));
@@ -36,7 +36,7 @@ export const postMessage = (message) => async (dispatch, getState) => {
 // Reducer
 export const initialState = {
   messages: [],
-  user: "",
+  user: ""
 };
 
 // // alternative pattern for writing reducer cases
@@ -48,7 +48,7 @@ export const initialState = {
 // }
 
 // :: (State, Action) -> State
-export default (state = initialState, action) => {
+const messageReducer = (state = initialState, action) => {
   // return mapTypeToCallback[action.type](state, action)
   switch (action.type) {
     case GOT_MESSAGES_FROM_SERVER:
@@ -61,3 +61,5 @@ export default (state = initialState, action) => {
       return state;
   }
 };
+
+export default messageReducer;

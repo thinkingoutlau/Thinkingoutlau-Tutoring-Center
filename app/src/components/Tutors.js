@@ -9,12 +9,13 @@ function Tutors() {
           Hello! My name is Winnie and I am the founder of Thinkingoutlau
           Tutoring Center. I am from Brooklyn, New York. I have a bachelor's
           degree in Mathematics and master's degree in Secondary Education in
-          Mathematics.
+          Mathematics. I have four years of teaching experience at a high school
+          and six years at a university. I have expertise in all math subjects
+          so do not hesitate to reach out!
         </div>
       </div>
 
       <div className="profile2">
-        <br></br>
         <p>
           <img src="https://media-exp1.licdn.com/dms/image/C5603AQEnD7l58nw1kg/profile-displayphoto-shrink_800_800/0/1653334919118?e=1670457600&v=beta&t=WmdXTbnwIhSy29UgJ_JbbdGs9WtvdW-pImroJYudKng" />
           <div className="description2">
@@ -26,7 +27,6 @@ function Tutors() {
       </div>
 
       <div className="profile3">
-        <br></br>
         <p>
           <img src="https://media-exp1.licdn.com/dms/image/C4D03AQG14IpmevaGXg/profile-displayphoto-shrink_800_800/0/1655726228547?e=1670457600&v=beta&t=FcqTJfLci7zf_QstwqMVYjEuErR2zcQe6RT62F5dwEw" />
           <div className="description3">
