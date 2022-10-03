@@ -141,9 +141,13 @@ function MakeAppointment() {
         <p>Please press the button on the bottom right to request for help!</p>
         <p>
           <br></br>
-          <small>
-            <small>Contact us: thinkingoutlau@gmail</small>
-          </small>
+          <div className="contactGmail">
+            <small>
+              <small>
+                <strong>Contact us:</strong> thinkingoutlau@gmail.com
+              </small>
+            </small>
+          </div>
         </p>
       </div>
       <ThemeProvider theme={theme}>

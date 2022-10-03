@@ -14,12 +14,12 @@ function Login() {
   const auth = useSelector(({ auth }) => auth);
   const [form, setForm] = useState({
     username: "",
-    password: "",
+    password: ""
   });
 
   //form gets passed in as an argument
   //on submit, making a post request to check user exist in the backend in db, which is set to userInDB
-  const handleSubmit = async (form) => {
+  const handleSubmit = async form => {
     try {
       dispatch(authenticate(form.username, form.password, "login"));
       // const { data: userInDB } = await axios.post("/api/login", form);
@@ -31,7 +31,7 @@ function Login() {
       // attemptTokenLogin();
       setForm({
         username: "",
-        password: "",
+        password: ""
       });
     } catch (error) {
       console.log(error);
@@ -52,43 +52,57 @@ function Login() {
   }, []);
 
   return auth.id ? (
-    <div>Welcome </div>
+    <div>
+      <p>
+        <img
+          className="welcomePageImage"
+          src="https://userguiding.com/wp-content/uploads/2020/10/how-to-design-welcome-page-1160x373.jpg"
+        />
+      </p>
+      {/* <h4>Welcome {auth.username}!</h4> */}
+    </div>
   ) : (
-    <form
-      onSubmit={(event) => {
-        event.preventDefault();
-        handleSubmit(form);
-      }}
-    >
-      <label htmlFor="Login">
-        <strong>Login</strong>
-      </label>
+    <div>
+      <img
+        className="welcomeStudentPic"
+        src="https://media.glassdoor.com/sqll/1803439/hello-student-squarelogo-1579865858057.png"
+      />
+      <form
+        onSubmit={event => {
+          event.preventDefault();
+          handleSubmit(form);
+        }}
+      >
+        <label htmlFor="Login">
+          <strong>Login</strong>
+        </label>
 
-      <input
-        onChange={(event) => setForm({ ...form, username: event.target.value })}
-        value={form.username}
-        name="username"
-        type="text"
-        placeholder="Enter username"
-      />
-      <input
-        onChange={(event) => setForm({ ...form, password: event.target.value })}
-        value={form.password}
-        name="password"
-        type="password"
-        autoComplete="on"
-        placeholder="Enter password"
-      />
-      <button>Submit</button>
-      <div className="makeAccount">
-        <p>
-          {"Don't have an account?"}
-          <strong>
-            <Link to="/signup">Sign up here</Link>
-          </strong>
-        </p>
-      </div>
-    </form>
+        <input
+          onChange={event => setForm({ ...form, username: event.target.value })}
+          value={form.username}
+          name="username"
+          type="text"
+          placeholder="Enter username"
+        />
+        <input
+          onChange={event => setForm({ ...form, password: event.target.value })}
+          value={form.password}
+          name="password"
+          type="password"
+          autoComplete="on"
+          placeholder="Enter password"
+        />
+        <button>Submit</button>
+        <div className="makeAccount">
+          <p>
+            {"Don't have an account?"}
+            <strong>
+              <Link to="/signup">Sign up here</Link>
+            </strong>
+          </p>
+        </div>
+      </form>
+    </div>
   );
 }
 

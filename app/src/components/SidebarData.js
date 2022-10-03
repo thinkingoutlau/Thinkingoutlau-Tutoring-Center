@@ -51,5 +51,11 @@ export const SidebarData = [
     path: "/help",
     // icon: <FaIcons.FaEnvelopeOpenText />,
     className: "nav-text"
+  },
+  {
+    title: "Math Puns, Why Not",
+    path: "/mathPuns",
+    // icon: <FaIcons.FaEnvelopeOpenText />,
+    className: "nav-text"
   }
 ];

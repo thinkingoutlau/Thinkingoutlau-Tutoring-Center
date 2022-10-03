@@ -5,6 +5,7 @@ const db = require("./db/db");
 // const volleyball = require("volleyball");
 const app = express();
 const bodyParser = require("body-parser");
+// const cors = require("cors");
 
 db.sync().then(() => console.log("Database is synced"));
 
@@ -33,7 +34,7 @@ app.get("*", (req, res) => {
 });
 
 // error handling middleware
-app.use(function (err, req, res, next) {
+app.use(function(err, req, res, next) {
   console.error(err);
   console.error(err.stack);
   res.status(err.status || 500).send(err.message || "Internal server error.");

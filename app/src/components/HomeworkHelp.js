@@ -15,17 +15,17 @@ function HomeworkHelp() {
 
   return (
     <div>
+      <ImageUploader />
       <ul>
         {images.map(image => {
           return (
-            <li key={image.id}>
-              <p>{image.name}</p>
-              <img src={image.data} />
-            </li>
+            <div key={image.id}>
+              {/* <p>{image.name}</p> */}
+              <img src={image.data} width="600px" height="400px" />
+            </div>
           );
         })}
       </ul>
-      <ImageUploader />
     </div>
   );
 }

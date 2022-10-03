@@ -6,10 +6,10 @@ import { Link } from "react-router-dom";
 const NewMessageEntry = () => {
   const dispatch = useDispatch();
   const [message, setMessage] = useState({
-    message: "",
+    message: ""
   });
 
-  const handleSubmit = (message) => {
+  const handleSubmit = message => {
     dispatch(postMessage(message));
     console.log(message);
   };
@@ -30,7 +30,7 @@ const NewMessageEntry = () => {
           {/* </li> */}
           <form
             id="new-message-form"
-            onSubmit={(event) => {
+            onSubmit={event => {
               event.preventDefault();
               handleSubmit(message);
             }}
@@ -40,11 +40,11 @@ const NewMessageEntry = () => {
                 className="form-control"
                 type="text"
                 name="content"
-                onChange={(event) =>
+                onChange={event =>
                   setMessage({ ...message, message: event.target.value })
                 }
                 value={message.message}
-                placeholder="Say something nice..."
+                placeholder="Say hi to your tutor!"
               />
               <span className="input-group-btn">
                 <button className="btn btn-default" type="submit">
@@ -56,8 +56,10 @@ const NewMessageEntry = () => {
         </div>
       ) : (
         <div className="chatboxMessage">
-          Please log in to message our tutors or create an appointment here:{" "}
-          <Link to="/appointment">schedule</Link>
+          <strong>
+            Please log in to message our tutors or create an appointment here:
+          </strong>
+          <Link to="/calendar">schedule</Link>
         </div>
       )}
     </div>
