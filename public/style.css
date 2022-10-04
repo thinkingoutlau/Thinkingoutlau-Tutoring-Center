@@ -41,10 +41,12 @@ h4 {
   height: 600px;
 }
 .welcomePageImage {
-  width: 80rem;
-  margin: 10px;
-  margin-top: 100px;
-  margin-left: 190px;
+  display: block;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1300px;
+  height: 500px;
 }
 
 .makeAccount {

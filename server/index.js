@@ -16,7 +16,7 @@ app.use(morgan("dev"));
 app.use(express.static(path.join(__dirname, "../public")));
 
 // body parsing middleware
-app.use(bodyParser.json());
+app.use(bodyParser.json({ limit: "10000kb" }));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // include our routes

@@ -5,12 +5,19 @@ const Image = require("../db/models/Image");
 router.get("/", async (req, res, next) => {
   try {
     const images = await Image.findAll();
-    res.json(images);
+    res.send(images);
   } catch (error) {
     next(error);
   }
 });
 
+router.post("/", async (req, res, next) => {
+  try {
+    res.status(201).send(await Image.create(req.body));
+  } catch (ex) {
+    next(ex);
+  }
+});
 // const storage = multer.diskStorage({
 //   destination: (req, file, cb) => {
 //     cb(null, "Images");
