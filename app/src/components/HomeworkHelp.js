@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchImages } from "../store/image";
 import ImageUploader from "./ImageUploader";
+import styled from "styled-components";
 
 function HomeworkHelp() {
   const dispatch = useDispatch();
@@ -19,9 +20,9 @@ function HomeworkHelp() {
       <ul>
         {images.map(image => {
           return (
-            <div key={image.id}>
+            <div className="homeworkImages" key={image.id}>
               <p>{image.name}</p>
-              <img src={image.data} width="500px" height="300px" />
+              <img src={image.data} width="500px" height="700px" />
             </div>
           );
         })}

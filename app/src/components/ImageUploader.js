@@ -8,7 +8,7 @@ function ImageUploader() {
     name: "",
     data: ""
   });
-  const [ref, setRef] = useState({});
+  // const [ref, setRef] = useState({});
 
   const handleSubmit = async e => {
     e.preventDefault();

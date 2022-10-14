@@ -19,11 +19,7 @@ const NewMessageEntry = () => {
       {localStorage.length !== 0 ? (
         <div>
           {/* <li className="media"> */}
-          <div className="media-left">
-            {/* <a href="#"> */}
-            {/* <img className="media-object" src={"winnie"} alt="image" /> */}
-            {/* </a> */}
-          </div>
+          <div className="media-left"></div>
           <div className="media-body">
             <h4 className="media-heading">Happy chatting!</h4>
           </div>
