@@ -137,7 +137,10 @@ function MakeAppointment() {
   return (
     <>
       <div className="messageToClickChatBot">
-        <img src="https://www.youcubed.org/wp-content/uploads/2017/03/beautiful-math-1.jpg" />
+        <img
+          className="helpPageImage"
+          src="https://www.youcubed.org/wp-content/uploads/2017/03/beautiful-math-1.jpg"
+        />
         <div>
           Please press the button on the bottom right to request for help!
         </div>

@@ -48,6 +48,13 @@ h4 {
   height: 600px;
 }
 
+@media only screen and (max-width: 780px) {
+  .homepagePic {
+    width: 600px;
+    height: 500px;
+  }
+}
+
 @media only screen and (max-width: 390px) {
   .homepagePic {
     width: 300px;
@@ -62,6 +69,22 @@ h4 {
   margin-right: auto;
   width: 1300px;
   height: 500px;
+}
+
+@media only screen and (max-width: 780px) {
+  .welcomePageImage {
+    margin-left: -30px;
+    width: 730px;
+    height: 300px;
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  .welcomePageImage {
+    margin-left: -30px;
+    width: 350px;
+    height: 200px;
+  }
 }
 
 .makeAccount {
@@ -126,6 +149,15 @@ form {
   border-width: 0.3rem;
 }
 
+@media only screen and (max-width: 390px) {
+  .logout {
+    margin: 5px 10px 50px 0;
+    width: 90px;
+    height: 20px;
+    padding: 10px 0 25px 0;
+  }
+}
+
 .menu-bars {
   margin-left: 2rem;
   font-size: 3rem;
@@ -177,13 +209,25 @@ form {
   text-decoration: none;
   /* color: #fff0f0; */
   color: #ffffff;
-  font-size: 18px;
+  font-size: 15px;
   width: 95%;
   height: 100%;
   display: flex;
   align-items: center;
   padding: 0 16px;
   border-radius: 4px;
+}
+
+@media only screen and (max-width: 390px) {
+  .nav-text a {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .nav-text a {
+    font-size: 20px;
+  }
 }
 
 .nav-text a:hover {
@@ -273,7 +317,6 @@ span {
     flex-direction: column;
     align-items: center;
     overflow-wrap: break-word;
-    margin: 0 0 0 -10px;
   }
 }
 
@@ -334,6 +377,21 @@ span {
   text-align: center;
   border-bottom: 5px solid #f499a8;
   font-style: italic;
+}
+
+@media only screen and (max-width: 780px) {
+  .helpPageImage {
+    width: 700px;
+    height: 400px;
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  .helpPageImage {
+    width: 350px;
+    height: 200px;
+    margin-left: -25px;
+  }
 }
 
 .mathPuns img {

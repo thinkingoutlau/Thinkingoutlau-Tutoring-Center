@@ -95,14 +95,14 @@ function Login() {
         />
         <button>Submit</button>
         <div className="makeAccount">
-          <p>
+          <div>
             {"Don't have an account?"}
             <strong>
               <p>
                 <Link to="/signup">Sign up here</Link>
               </p>
             </strong>
-          </p>
+          </div>
         </div>
       </form>
     </div>
