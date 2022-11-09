@@ -36,7 +36,7 @@ function ImageUploader() {
   };
 
   return (
-    <div>
+    <div className="homeworkUploader">
       <h2>Upload Homework</h2>
       {image.name && <img src={image.data} width="100" height="100" />}
       <hr></hr>

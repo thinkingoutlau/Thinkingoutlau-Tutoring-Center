@@ -4,6 +4,13 @@
   padding: 8px;
   font-family: "Lato", sans-serif;
 }
+@media only screen and (max-width: 390px) {
+  * {
+    overflow-wrap: break-word;
+    width: 300px;
+    margin: 0;
+  }
+}
 
 body {
   /* background: rgb(247, 247, 247); */
@@ -40,6 +47,14 @@ h4 {
   width: 1000px;
   height: 600px;
 }
+
+@media only screen and (max-width: 390px) {
+  .homepagePic {
+    width: 300px;
+    height: 200px;
+  }
+}
+
 .welcomePageImage {
   display: block;
   margin-top: 50px;
@@ -58,10 +73,21 @@ form {
   font-size: 20px;
   margin: 30px;
 }
+
+@media only screen and (max-width: 390px) {
+  .loginForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: -5px;
+  }
+}
+
 .login {
   font-size: 20px;
   text-align: center;
 }
+
 .welcomeStudentPic {
   display: block;
   margin-top: 20px;
@@ -82,6 +108,13 @@ form {
   flex-direction: row;
 }
 
+@media only screen and (max-width: 390px) {
+  .navbar {
+    width: 400px;
+    margin: -20px 0 0 -40px;
+  }
+}
+
 .logout {
   margin-right: 16px;
   font-size: 1rem;
@@ -99,6 +132,13 @@ form {
   background: none;
 }
 
+@media only screen and (max-width: 390px) {
+  .menu-bars {
+    margin: 0 0 0 -120px;
+    background: none;
+  }
+}
+
 .nav-menu {
   background-color: #f499a8;
   /* background-color: #5deac6; */
@@ -110,6 +150,13 @@ form {
   top: 0;
   left: -100%;
   transition: 850ms;
+}
+
+@media only screen and (max-width: 390px) {
+  .nav-menu {
+    margin: 0 0 0 -10px;
+    height: 1000px;
+  }
 }
 
 .nav-menu.active {
@@ -166,6 +213,12 @@ span {
   position: relative;
 }
 
+@media only screen and (max-width: 390px) {
+  #new-message-form {
+    margin-left: -30px;
+  }
+}
+
 #new-message-form .form-control {
   border-width: 3px 1.5px 3px 3px;
 }
@@ -190,9 +243,6 @@ span {
   /* padding: 30px; */
 }
 
-.calendar {
-}
-
 .subjects {
   display: inline-flex;
   flex-wrap: wrap;
@@ -210,8 +260,6 @@ span {
 }
 
 .subjects img {
-  /* text-align: center; */
-  /* margin: 20px; */
   width: 18rem;
   height: 18rem;
   background-color: #f499a8;
@@ -219,101 +267,52 @@ span {
   border-radius: 50%;
 }
 
-/* .profileInfo {
-  border-bottom: solid;
-  border-width: 5px 1px;
+@media only screen and (max-width: 390px) {
+  .profileInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-wrap: break-word;
+    margin: 0 0 0 -10px;
+  }
+}
+
+.profile img {
+  display: block;
+  margin: 0 auto 20px auto;
+  width: 180px;
+  height: 180px;
+  background-color: #f499a8;
+  color: #f499a8;
+  border-radius: 50%;
+}
+
+.description {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 500px;
+  font-size: 20px;
+  border-top: 5px solid rgb(122, 122, 122);
+  border-bottom: 5px solid rgb(122, 122, 122);
+}
+@media only screen and (max-width: 390px) {
+  .description {
+    overflow-wrap: break-word;
+    width: 300px;
+    margin: 0.3em;
+  }
+}
+
+/* @media only screen and (max-width: 390px) {
+  .input-group input-group-lg {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
 } */
 
-.profile1 img {
-  display: block;
-  width: 180px;
-  height: 180px;
-  background-color: #f499a8;
-  color: #f499a8;
-  border-radius: 50%;
-  float: right;
-  margin-right: 200px;
-  margin-top: 20px;
-  margin-left: 20px;
-}
-
-.description1 {
-  /* display: inline-flex;
-  flex-wrap: wrap; */
-  display: block;
-  width: 500px;
-  font-size: 20px;
-  float: right;
-  margin-left: 100px;
-  text-align: right;
-  border-top: 5px solid rgb(122, 122, 122);
-  border-bottom: 5px solid rgb(122, 122, 122);
-  /* border-top: 5px solid #f499a8;
-  border-bottom: 5px solid #f499a8; */
-}
-
-.profile2 img {
-  display: block;
-  width: 180px;
-  height: 180px;
-  background-color: #f499a8;
-  color: #f499a8;
-  border-radius: 50%;
-  float: left;
-  margin-left: 200px;
-  margin-top: 200px;
-  margin-right: 20px;
-}
-
-.description2 {
-  /* display: inline-flex;
-  flex-wrap: wrap; */
-  display: block;
-  width: 500px;
-  font-size: 20px;
-  float: left;
-  margin-right: 100px;
-  margin-top: 50px;
-  border-top: 5px solid rgb(122, 122, 122);
-  border-bottom: 5px solid rgb(122, 122, 122);
-  /* border-top: 5px solid #f499a8;
-  border-bottom: 5px solid #f499a8; */
-}
-
-.profile3 img {
-  display: block;
-  width: 180px;
-  height: 180px;
-  background-color: #f499a8;
-  color: #f499a8;
-  border-radius: 50%;
-  float: right;
-  margin-right: 200px;
-  margin-top: 230px;
-  margin-left: 20px;
-}
-
-.description3 {
-  /* display: inline-flex;
-  flex-wrap: wrap; */
-  display: block;
-  width: 500px;
-  font-size: 20px;
-  float: right;
-  margin-left: 200px;
-  margin-top: 75px;
-  text-align: right;
-  border-top: 5px solid rgb(122, 122, 122);
-  border-bottom: 5px solid rgb(122, 122, 122);
-  /* border-top: 5px solid #f499a8;
-  border-bottom: 5px solid #f499a8; */
-}
-
 .homeworkImages {
-  /* margin-top: 40px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 40px; */
   width: 100%;
   padding: 10px;
   background: #fff;
@@ -322,12 +321,19 @@ span {
   position: relative;
 }
 
+@media only screen and (max-width: 390px) {
+  .homeworkUploader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: -5px;
+  }
+}
+
 .contactGmail {
   text-align: center;
-  /* width: 500px; */
   border-bottom: 5px solid #f499a8;
   font-style: italic;
-  /* margin-left: 40rem; */
 }
 
 .mathPuns img {
@@ -336,5 +342,10 @@ span {
   height: 22rem;
   background-color: #f499a8;
   color: #f499a8;
-  /* border-radius: 50%; */
+}
+
+@media only screen and (max-width: 390px) {
+  .mathPuns img {
+    margin: 10px 5px 10px -20px;
+  }
 }

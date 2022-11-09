@@ -68,6 +68,7 @@ function Login() {
         src="https://media.glassdoor.com/sqll/1803439/hello-student-squarelogo-1579865858057.png"
       />
       <form
+        className="loginForm"
         onSubmit={event => {
           event.preventDefault();
           handleSubmit(form);
@@ -97,7 +98,9 @@ function Login() {
           <p>
             {"Don't have an account?"}
             <strong>
-              <Link to="/signup">Sign up here</Link>
+              <p>
+                <Link to="/signup">Sign up here</Link>
+              </p>
             </strong>
           </p>
         </div>

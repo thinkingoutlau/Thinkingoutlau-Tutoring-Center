@@ -138,8 +138,10 @@ function MakeAppointment() {
     <>
       <div className="messageToClickChatBot">
         <img src="https://www.youcubed.org/wp-content/uploads/2017/03/beautiful-math-1.jpg" />
-        <p>Please press the button on the bottom right to request for help!</p>
-        <p>
+        <div>
+          Please press the button on the bottom right to request for help!
+        </div>
+        <div>
           <br></br>
           <div className="contactGmail">
             <small>
@@ -148,7 +150,7 @@ function MakeAppointment() {
               </small>
             </small>
           </div>
-        </p>
+        </div>
       </div>
       <ThemeProvider theme={theme}>
         <ChatBot steps={steps} {...config} />

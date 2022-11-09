@@ -43,9 +43,11 @@ const NewMessageEntry = () => {
                 placeholder="Say hi to your tutor!"
               />
               <span className="input-group-btn">
-                <button className="btn btn-default" type="submit">
-                  Chat!
-                </button>
+                <p>
+                  <button className="btn btn-default" type="submit">
+                    Chat!
+                  </button>
+                </p>
               </span>
             </div>
           </form>
@@ -59,7 +61,6 @@ const NewMessageEntry = () => {
         </div>
       )}
     </div>
-
   );
 };
 
