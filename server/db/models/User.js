@@ -10,34 +10,28 @@ const User = db.define("user", {
   username: {
     type: Sequelize.STRING,
     unique: true,
-    allowNull: false,
+    allowNull: false
   },
   password: {
     type: Sequelize.STRING,
     allowNull: false,
     validate: {
-      notEmpty: true,
-    },
+      notEmpty: true
+    }
   },
   isAdmin: {
     type: Sequelize.BOOLEAN,
-    defaultValue: false,
-  },
+    defaultValue: false
+  }
 });
 
 module.exports = User;
 
-// User.prototype.correctPassword = function (candidatePwd) {
-//   //we need to compare the plain version to an encrypted version of the password
-//   return bcrypt.compare(candidatePwd, this.password);
-// };
-
-User.prototype.generateToken = function () {
+User.prototype.generateToken = function() {
   return { token: this.id };
-  // return jwt.sign({ token: this.id }, process.env.JWT);
 };
 
-User.findByToken = async (token) => {
+User.findByToken = async token => {
   try {
     const user = await User.findByPk(token);
     if (!user) {
@@ -55,8 +49,8 @@ User.authenticate = async ({ username, password }) => {
   const user = await User.findOne({
     where: {
       username,
-      password,
-    },
+      password
+    }
   });
   if (!user) {
     const error = Error("bad credentials");
