@@ -20,9 +20,9 @@ function HomeworkHelp() {
       <ul>
         {images.map(image => {
           return (
-            <div className="homeworkImages" key={image.id}>
+            <div key={image.id} align="center">
               <p>{image.name}</p>
-              <img src={image.data} width="500px" height="700px" />
+              <img className="homeworkImages" src={image.data} />
             </div>
           );
         })}

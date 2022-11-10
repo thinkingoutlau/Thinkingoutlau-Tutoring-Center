@@ -1,21 +1,23 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { createNewUser } from "../store/user";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function SignUp() {
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const [form, setForm] = useState({
     username: "",
-    password: "",
+    password: ""
   });
-  const handleSubmit = (form) => {
+  const handleSubmit = form => {
     dispatch(createNewUser(form));
+    navigate("/login");
   };
 
   return (
     <form
-      onSubmit={(event) => {
+      onSubmit={event => {
         event.preventDefault();
         handleSubmit(form);
       }}
@@ -25,14 +27,14 @@ function SignUp() {
       </label>
 
       <input
-        onChange={(event) => setForm({ ...form, username: event.target.value })}
+        onChange={event => setForm({ ...form, username: event.target.value })}
         value={form.username}
         name="username"
         type="text"
         placeholder="Enter username"
       />
       <input
-        onChange={(event) => setForm({ ...form, password: event.target.value })}
+        onChange={event => setForm({ ...form, password: event.target.value })}
         value={form.password}
         name="password"
         type="password"
