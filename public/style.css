@@ -314,7 +314,7 @@ span {
 .profileInfo {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-end;
 }
 
 @media only screen and (max-width: 390px) {
