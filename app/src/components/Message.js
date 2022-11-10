@@ -15,15 +15,15 @@ const NewMessageEntry = () => {
   };
 
   return (
-    <div>
+    <div className="messengerBox">
+      <div align="center">
+        <img className="askForHelp" src="/AskForHelp.jpeg" />
+      </div>
+      <h3 className="media-heading">Happy chatting!</h3>
       {localStorage.length !== 0 ? (
         <div>
-          {/* <li className="media"> */}
-          <div className="media-left"></div>
-          <div className="media-body">
-            <h4 className="media-heading">Happy chatting!</h4>
-          </div>
-          {/* </li> */}
+          <hr></hr>
+
           <form
             id="new-message-form"
             onSubmit={event => {
