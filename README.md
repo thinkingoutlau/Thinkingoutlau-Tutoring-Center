@@ -6,8 +6,9 @@ As the years have passed, I had put this dream of mine on the side. Coming to te
 
 It wasn't until the pandemic did we realize that almost everything can be done remotely. Being on both sides, as a teacher and a student, teaching and learning through zoom were just as effective as in-person. Although there are some challenges with remote learning, there are also so many tools at our disposal that allow us to work effectively. And this was when I decided to create an online tutoring center, taking the first step toward the dream I had almost ten years ago.
 
-<i>This will be a on-going project as I continue to add on and perfect it.</i>
+
 
 <p align="center">
  <img src="public/ThinkingoutlauTutoringCenter.png" width="750">
+ <i>This will be a on-going project as I continue to add on and perfect it.</i>
 </p>
