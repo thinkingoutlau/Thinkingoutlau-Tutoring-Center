@@ -10,5 +10,6 @@ It wasn't until the pandemic did we realize that almost everything can be done r
 
 <p align="center">
  <img src="public/ThinkingoutlauTutoringCenter.png" width="750">
- <p><i>This will be a on-going project as I continue to add on and perfect it.</i></p>
 </p>
+
+ <p align="center"><i>This will be a on-going project as I continue to add on and perfect it.</i></p>
